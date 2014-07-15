@@ -2,4 +2,4 @@ pwd
 
 ls
 
-node hello.js
+docker run .
