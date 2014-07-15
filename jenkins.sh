@@ -13,4 +13,4 @@ echo "---- Running the Docker container... "
 #nodejs == node becuase ubuntu is wicked weird.
 docker run hello-world-node nodejs /src/hello.js
 
-echo "---- DONE!"
+echo "---- DONE ----"
