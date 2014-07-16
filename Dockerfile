@@ -1,8 +1,6 @@
 # DOCKER-VERSION 0.10.0
 # To build container: docker build .
 
-# DOCKER-VERSION 0.10.0
-
 FROM ubuntu:13.10
 
 # make sure apt is up to date
