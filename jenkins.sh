@@ -18,7 +18,7 @@ dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker
 
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID}
 
-echo dockerip
+echo $dockerip
 
 echo "This should auto-bind to available port"
 
