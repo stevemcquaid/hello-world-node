@@ -12,7 +12,13 @@ echo "---- Running the Docker container... "
 #kickoff/start the node app.
 #nodejs == node becuase ubuntu is wicked weird.
 #docker run -d -P hello-world-node nodejs /src/hello.js ### Can't use this due to security group port restrictions
-docker run -d -p 60015:9009 hello-world-node nodejs /src/hello.js
+CID=$(docker run -d -p 60015:9009 hello-world-node nodejs /src/hello.js);
+
+dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
+
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID}
+
+echo dockerip
 
 echo "This should auto-bind to available port"
 
