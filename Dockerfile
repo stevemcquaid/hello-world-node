@@ -14,4 +14,4 @@ ADD . /src
 # Install app dependencies
 RUN cd /src; npm install
 
-EXPOSE  8888
+EXPOSE  9009
